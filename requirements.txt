@@ -1,0 +1,12 @@
+streamlit==1.52.2
+pandas==2.3.3
+natasha==1.6.0
+torch==2.3.0
+sentence_transformers
+tqdm
+numpy==1.26.4
+chardet
+PyMuPDF
+python-docx
+keras==2.15.0
+tensorflow==2.15.0
