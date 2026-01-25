@@ -169,9 +169,12 @@ def similarity_economic_meaning(embeddings: list, sample_emb_torch: torch.tensor
     for idx, emb in enumerate(embeddings):
         # Преобразуем в тензор
         nar_vec_torch = torch.tensor(emb)
-        # Считаем сходство
-        similarity = util.cos_sim(nar_vec_torch, sample_emb_torch)
-        similarities.append(similarity.squeeze().tolist())
+        try:
+            # Считаем сходство
+            similarity = util.cos_sim(nar_vec_torch, sample_emb_torch)
+            similarities.append(similarity.squeeze().tolist())
+        except IndexError:
+            continue
 
     return similarities
 
