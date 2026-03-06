@@ -1,11 +1,19 @@
 from keras.models import load_model
 from similarity_funcs import get_embedding
 import numpy as np
+import streamlit as st
+
+
+@st.cache_resource
+def load_classifier(model_name):
+    model = load_model(model_name)
+    return model
 
 
 def get_prediction(model_name, text):
     """Функция для получения предсказания """
-    model = load_model(model_name)
+    # model = load_model(model_name)
+    model = load_classifier(model_name)
     # Получаем embedding
     emb = get_embedding([text], verbose=False)  # например shape = (312,)
     emb = np.array(emb, dtype=np.float32)
