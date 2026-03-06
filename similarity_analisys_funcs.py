@@ -35,7 +35,7 @@ def formalize_text(x: list, tokenizer, model):
         doc.segment(segmenter)
         doc.tag_morph(morph_tagger)
         doc.parse_syntax(syntax_parser)
-        morph_vocab = MorphVocab()
+        # morph_vocab = MorphVocab()
         ner_tagger = NewsNERTagger(emb)
         doc.tag_ner(ner_tagger)
 
