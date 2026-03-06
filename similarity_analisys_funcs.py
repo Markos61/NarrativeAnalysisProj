@@ -15,6 +15,7 @@ from similarity_ranging import narratives_ranging
 import streamlit as st
 
 
+@st.cache_data
 def formalize_text(x: list, tokenizer, model):
     """
     Функция, которая ищет нарративные признаки
