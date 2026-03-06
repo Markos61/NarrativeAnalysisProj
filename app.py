@@ -276,7 +276,7 @@ with tab2:
                                                         margin-bottom:10px;
                                                         text-align: center;
                                                     ">
-                                                        ТОП-3 предложения
+                                                        ТОП предложений
                                                     </div>
                                                     """,
                                 unsafe_allow_html=True
